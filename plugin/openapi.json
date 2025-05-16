@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Meta Ads Insights API",
-    "description": "Günlük ve saatlik Meta reklam verilerini çeker.",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "description": "Bu API, GitHub'da barındırılan günlük ve saatlik Meta Ads verilerini GPT ile analiz etmek için kullanılabilir."
   },
   "servers": [
     {
@@ -11,10 +11,21 @@
     }
   ],
   "paths": {
-    "/daily-insights": {
+    "/get-daily-insights": {
       "get": {
-        "summary": "Günlük performans verilerini getirir",
-        "operationId": "getDailyInsights",
+        "summary": "Belirli bir tarih için ad-level günlük performans verisini getirir",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "İstenen tarih (YYYY-MM-DD formatında)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "JSON formatında günlük performans verisi",
@@ -32,10 +43,21 @@
         }
       }
     },
-    "/hourly-insights": {
+    "/get-hourly-insights": {
       "get": {
-        "summary": "Saatlik performans verilerini getirir",
-        "operationId": "getHourlyInsights",
+        "summary": "Belirli bir tarih için campaign-level saatlik veriyi getirir",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "İstenen tarih (YYYY-MM-DD formatında)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "JSON formatında saatlik performans verisi",
