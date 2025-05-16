@@ -1,0 +1,7 @@
+# requirements.txt
+# Bu dosya aşağıdaki kütüphaneleri gerektirir: Flask, requests, pandas, python-dotenv
+
+Flask==2.3.3
+requests==2.31.0
+python-dotenv==1.0.1
+pandas==2.2.2
