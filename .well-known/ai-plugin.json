@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Meta Ads Insights",
+  "name_for_model": "meta_ads_insights",
+  "description_for_human": "Günlük ve saatlik Meta reklam performans verilerini analiz eder.",
+  "description_for_model": "Fetches Meta Ads performance insights from daily/hourly GitHub-hosted JSON files and helps analyze them.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://dkfbayraktar.github.io/Meta_Ads_API/.well-known/openapi.json"
+  },
+  "logo_url": "https://dkfbayraktar.github.io/Meta_Ads_API/.well-known/logo.png",
+  "contact_email": "growthcopilot@denizbayraktar.ai",
+  "legal_info_url": "https://dkfbayraktar.github.io/Meta_Ads_API/legal"
+}
+
