@@ -2,31 +2,19 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Meta Ads Insights API",
-    "version": "1.0.0",
-    "description": "Bu API, GitHub'da barındırılan günlük ve saatlik Meta Ads verilerini GPT ile analiz etmek için kullanılabilir."
+    "description": "Günlük ve saatlik Meta reklam verilerini çeker.",
+    "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://dkfbayraktar.github.io/Meta_Ads_API",
-      "description": "GitHub Pages üzerinden statik JSON erişimi"
+      "url": "https://dkfbayraktar.github.io/Meta_Ads_API"
     }
   ],
   "paths": {
-    "/get-daily-insights": {
+    "/daily-insights": {
       "get": {
-        "summary": "Belirli bir tarih için ad-level günlük performans verisini getirir",
-        "parameters": [
-          {
-            "name": "date",
-            "in": "query",
-            "description": "İstenen tarih (YYYY-MM-DD formatında)",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "date"
-            }
-          }
-        ],
+        "summary": "Günlük performans verilerini getirir",
+        "operationId": "getDailyInsights",
         "responses": {
           "200": {
             "description": "JSON formatında günlük performans verisi",
@@ -44,21 +32,10 @@
         }
       }
     },
-    "/get-hourly-insights": {
+    "/hourly-insights": {
       "get": {
-        "summary": "Belirli bir tarih için campaign-level saatlik veriyi getirir",
-        "parameters": [
-          {
-            "name": "date",
-            "in": "query",
-            "description": "İstenen tarih (YYYY-MM-DD formatında)",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "date"
-            }
-          }
-        ],
+        "summary": "Saatlik performans verilerini getirir",
+        "operationId": "getHourlyInsights",
         "responses": {
           "200": {
             "description": "JSON formatında saatlik performans verisi",
