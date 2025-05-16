@@ -1,0 +1,81 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Meta Ads Insights API",
+    "version": "1.0.0",
+    "description": "Bu API, GitHub'da barındırılan günlük ve saatlik Meta Ads verilerini GPT ile analiz etmek için kullanılabilir."
+  },
+  "servers": [
+    {
+      "url": "https://example.com",
+      "description": "Placeholder server URL. Data is read-only from GitHub static JSON."
+    }
+  ],
+  "paths": {
+    "/get-daily-insights": {
+      "get": {
+        "summary": "Belirli bir tarih için ad-level günlük performans verisini getirir",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "İstenen tarih (YYYY-MM-DD formatında)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "JSON formatında günlük performans verisi",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/get-hourly-insights": {
+      "get": {
+        "summary": "Belirli bir tarih için campaign-level saatlik veriyi getirir",
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "description": "İstenen tarih (YYYY-MM-DD formatında)",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "JSON formatında saatlik performans verisi",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
