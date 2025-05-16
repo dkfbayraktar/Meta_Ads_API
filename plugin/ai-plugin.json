@@ -13,5 +13,11 @@
   },
   "logo_url": "https://dkfbayraktar.github.io/Meta_Ads_API/plugin/logo.png",
   "contact_email": "growthcopilot@denizbayraktar.ai",
-  "legal_info_url": "https://dkfbayraktar.github.io/Meta_Ads_API/legal"
+  "legal_info_url": "https://dkfbayraktar.github.io/Meta_Ads_API/legal",
+  "servers": [
+    {
+      "url": "https://dkfbayraktar.github.io/Meta_Ads_API"
+    }
+  ]
 }
+
