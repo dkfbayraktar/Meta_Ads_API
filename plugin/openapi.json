@@ -7,8 +7,8 @@
   },
   "servers": [
     {
-      "url": "https://example.com",
-      "description": "Placeholder server URL. Data is read-only from GitHub static JSON."
+      "url": "https://dkfbayraktar.github.io/Meta_Ads_API",
+      "description": "GitHub Pages üzerinden statik JSON erişimi"
     }
   ],
   "paths": {
