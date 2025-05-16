@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Meta Ads Data Explorer",
+  "name_for_model": "meta_ads_data_explorer",
+  "description_for_human": "Meta Ads verilerini incele, kıyasla ve kararlar al.",
+  "description_for_model": "Provides daily and hourly ad performance insights from GitHub-hosted static JSON files for Meta Ads.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://dkfbayraktar.github.io/Meta_Ads_API/plugin/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://dkfbayraktar.github.io/Meta_Ads_API/plugin/logo.png",
+  "contact_email": "denizbayraktar@example.com",
+  "legal_info_url": "https://thenichebox.co/legal"
+}
+
